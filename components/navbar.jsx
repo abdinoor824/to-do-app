@@ -7,9 +7,7 @@ const Navbar = () => {
       <h1 className='text-lg font-semibold'>Todo app</h1>
     <ul className='flex gap-[40px] text-m'>
         <li>Home</li>
-        <li>Product</li>
-        <li>About</li>
-        <li>Contact</li>
+       
     </ul>
     </div>
   )
