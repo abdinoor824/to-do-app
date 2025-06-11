@@ -7,7 +7,7 @@ const Navbar = () => {
   const { data: session, status } = useSession();
 
   return (
-    <nav className="bg-gray-800 text-white px-6 py-4 flex justify-between items-center shadow-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-800 text-white px-6 py-4 flex justify-between items-center shadow-md w-full">
       <Link href="/" className="text-xl font-bold hover:text-teal-400">
         Todo App
       </Link>

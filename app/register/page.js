@@ -26,9 +26,11 @@ const Page = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-gray-500 p-8 rounded-md shadow-md w-full max-w-sm">
-        <h2 className="text-2xl font-bold mb-6 text-white">Signup</h2>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
+      <div className="bg-gray-700 p-6 sm:p-8 rounded-lg shadow-md w-full max-w-sm sm:max-w-md">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-white text-center">
+          Create an Account
+        </h2>
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
             <label className="block text-sm font-medium mb-1 text-white" htmlFor="username">
@@ -39,8 +41,8 @@ const Page = () => {
               onChange={(e) => setName(e.target.value)}
               id="username"
               type="text"
-              placeholder="Enter Username"
-              className="w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+              placeholder="Enter your name"
+              className="w-full border border-gray-300 px-3 py-2 sm:px-4 sm:py-2.5 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm sm:text-base"
             />
           </div>
           <div>
@@ -52,8 +54,8 @@ const Page = () => {
               onChange={(e) => setEmail(e.target.value)}
               id="email"
               type="email"
-              placeholder="Enter Email"
-              className="w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+              placeholder="Enter your email"
+              className="w-full border border-gray-300 px-3 py-2 sm:px-4 sm:py-2.5 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm sm:text-base"
             />
           </div>
           <div>
@@ -65,13 +67,13 @@ const Page = () => {
               onChange={(e) => setPassword(e.target.value)}
               id="password"
               type="password"
-              placeholder="Enter Password"
-              className="w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+              placeholder="Enter your password"
+              className="w-full border border-gray-300 px-3 py-2 sm:px-4 sm:py-2.5 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm sm:text-base"
             />
           </div>
           <button
             type="submit"
-            className="w-full bg-teal-600 text-white py-2 rounded-md hover:bg-teal-700 transition duration-200"
+            className="w-full bg-teal-600 text-white py-2 sm:py-2.5 rounded-md hover:bg-teal-700 transition duration-200 text-sm sm:text-base font-semibold"
           >
             Signup
           </button>

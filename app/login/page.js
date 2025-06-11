@@ -32,10 +32,10 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex items-center justify-center min-h-screen bg-gray-100 pt-20 px-4 ">
       <ToastContainer />
-      <div className="bg-gray-500 p-8 rounded-md shadow-md w-full max-w-sm">
-        <h2 className="text-2xl font-bold mb-6 text-white">Login</h2>
+      <div className="bg-gray-500 p-6 sm:p-8 rounded-md shadow-md w-full max-w-sm ">
+        <h2 className="text-2xl font-bold mb-6 text-white text-center">Login</h2>
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
             <label className="block text-sm font-medium mb-1 text-white" htmlFor="email">
@@ -48,6 +48,7 @@ const Login = () => {
               type="email"
               placeholder="Enter Email"
               className="w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+              required
             />
           </div>
           <div>
@@ -61,11 +62,12 @@ const Login = () => {
               type="password"
               placeholder="Enter Password"
               className="w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+              required
             />
           </div>
           <button
             type="submit"
-            className="w-full bg-teal-500 text-white px-4 py-2 rounded-md hover:bg-teal-600 transition-colors duration-200"
+            className="w-full bg-teal-600 text-white py-2 rounded-md hover:bg-teal-700 transition duration-200"
           >
             Login
           </button>
