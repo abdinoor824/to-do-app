@@ -7,20 +7,33 @@ const Navbar = () => {
   const { data: session, status } = useSession();
 
   return (
-    <nav style={{ display: 'flex', gap: '1rem', padding: '1rem' }}>
-      <Link href="/">Todo app</Link>
+    <nav className="bg-gray-800 text-white px-6 py-4 flex justify-between items-center shadow-md">
+      <Link href="/" className="text-xl font-bold hover:text-teal-400">
+        Todo App
+      </Link>
 
-      {status === "loading" ? null : session ? (
-        <>
-          <span>Welcome, {session.user.email}</span>
-          <button onClick={() => signOut()}>Logout</button>
-        </>
-      ) : (
-        <>
-          <Link href="/login">login</Link>
-          <Link href="/register">register</Link>
-        </>
-      )}
+      <div className="flex gap-4 items-center">
+        {status === "loading" ? null : session ? (
+          <>
+            <span className="text-sm">Welcome, {session.user.email}</span>
+            <button
+              onClick={() => signOut()}
+              className="bg-red-500 hover:bg-red-600 px-3 py-1 rounded text-white text-sm"
+            >
+              Logout
+            </button>
+          </>
+        ) : (
+          <>
+            <Link href="/login" className="hover:text-teal-400 text-sm">
+              Login
+            </Link>
+            <Link href="/register" className="hover:text-teal-400 text-sm">
+              Register
+            </Link>
+          </>
+        )}
+      </div>
     </nav>
   );
 };

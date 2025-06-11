@@ -71,7 +71,10 @@ export default function Home() {
     return (
       <>
         <ToastContainer theme="dark" />
-        <p className="text-center text-red-500 mt-10">Login to create and view your todos.</p>
+       <p className="text-center text-red-500 mt-10 text-lg font-medium bg-red-100 py-3 px-6 rounded shadow-sm w-fit mx-auto">
+  Login to create and view your todos.
+</p>
+
       </>
     );
   }
