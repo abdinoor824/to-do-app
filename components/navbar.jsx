@@ -1,16 +1,28 @@
-import React from 'react'
+'use client';
+
+import Link from "next/link";
+import { useSession, signOut } from "next-auth/react";
 
 const Navbar = () => {
-  return (
-    <div className='flex py-3 flex-wrap justify-around'>
-     
-      <h1 className='text-lg font-semibold'>Todo app</h1>
-    <ul className='flex gap-[40px] text-m'>
-        <li>Home</li>
-       
-    </ul>
-    </div>
-  )
-}
+  const { data: session, status } = useSession();
 
-export default Navbar
+  return (
+    <nav style={{ display: 'flex', gap: '1rem', padding: '1rem' }}>
+      <Link href="/">Todo app</Link>
+
+      {status === "loading" ? null : session ? (
+        <>
+          <span>Welcome, {session.user.email}</span>
+          <button onClick={() => signOut()}>Logout</button>
+        </>
+      ) : (
+        <>
+          <Link href="/login">login</Link>
+          <Link href="/register">register</Link>
+        </>
+      )}
+    </nav>
+  );
+};
+
+export default Navbar;
